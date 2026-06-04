@@ -1,0 +1,69 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background ala teknologi (Gelap futuristik) */
+body {
+    background-color: #0b0f19;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Desain Hero Section */
+.hero {
+    text-align: center;
+}
+
+.status {
+    color: #00ffcc; /* Warna hijau neon ala siber */
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Efek warna menyala pada nama */
+.highlight {
+    color: #0070f3; /* Biru teknologi */
+    text-shadow: 0 0 10px rgba(0, 112, 243, 0.5);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* Tombol Interaktif */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Efek pas tombol disentuh kursor */
+.btn:hover {
+    background-color: #00ffcc;
+    color: #0b0f19;
+    box-shadow: 0 0 15px #00ffcc;
+    transform: translateY(-3px);
+}
