@@ -6,15 +6,15 @@
 <title>Teris Suherlan | Teknik Elektronika</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0a1628;
     --navy-mid: #112240;
     --blue: #1a3a6b;
     --accent: #2563eb;
-    --green: #22c55e;
-    --green-dark: #16a34a;
+    --green: #f59e0b;
+    --green-dark: #d97706;
     --light: #f0f4ff;
     --white: #ffffff;
     --gray: #94a3b8;
@@ -23,7 +23,7 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
-  body { font-family:'Plus Jakarta Sans',sans-serif; background:#f8fafc; color:var(--text); overflow-x:hidden; }
+  body { font-family:'Roboto',sans-serif; background:#f8fafc; color:var(--text); overflow-x:hidden; }
 
   /* ===== NAVBAR ===== */
   nav {
@@ -36,7 +36,7 @@
     border-bottom: 1px solid rgba(255,255,255,0.07);
   }
   .nav-logo { display:flex; flex-direction:column; }
-  .nav-logo .name { color:#fff; font-family:'Syne',sans-serif; font-size:1.15rem; font-weight:800; line-height:1.1; }
+  .nav-logo .name { color:#fff; font-family:'Poppins',sans-serif; font-size:1.15rem; font-weight:800; line-height:1.1; }
   .nav-logo .role { color:var(--green); font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; }
   .nav-links { display:flex; gap:2rem; list-style:none; }
   .nav-links a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.88rem; font-weight:500; transition:color .2s; position:relative; }
@@ -71,7 +71,7 @@
   .hero-badge { display:inline-flex; align-items:center; gap:.5rem; background:rgba(34,197,94,0.12); border:1px solid rgba(34,197,94,0.3); color:var(--green); font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:.35rem 1rem; border-radius:100px; margin-bottom:1.5rem; }
   .hero-badge::before { content:''; width:7px; height:7px; background:var(--green); border-radius:50%; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
-  .hero-text h1 { font-family:'Syne',sans-serif; font-size:clamp(2.2rem,4.5vw,3.4rem); font-weight:800; color:#fff; line-height:1.1; margin-bottom:.5rem; }
+  .hero-text h1 { font-family:'Poppins',sans-serif; font-size:clamp(2.2rem,4.5vw,3.4rem); font-weight:800; color:#fff; line-height:1.1; margin-bottom:.5rem; }
   .hero-text h1 span { color:var(--green); }
   .hero-text .subtitle { font-size:1.1rem; color:rgba(255,255,255,0.6); margin:1rem 0 2rem; line-height:1.7; }
   .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
@@ -81,7 +81,7 @@
   .btn-outline:hover { border-color:#fff; background:rgba(255,255,255,0.08); transform:translateY(-2px); }
   .hero-stats { display:flex; gap:2rem; margin-top:2.5rem; }
   .stat { }
-  .stat .num { font-family:'Syne',sans-serif; font-size:1.8rem; font-weight:800; color:#fff; line-height:1; }
+  .stat .num { font-family:'Poppins',sans-serif; font-size:1.8rem; font-weight:800; color:#fff; line-height:1; }
   .stat .label { font-size:.75rem; color:var(--gray); font-weight:500; margin-top:.2rem; }
   .hero-img-wrap { position:relative; display:flex; justify-content:center; }
   .hero-img-bg { position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:340px; height:400px; background:linear-gradient(135deg, var(--accent) 0%, var(--blue) 100%); border-radius:50% 50% 48% 52%/60% 60% 40% 40%; opacity:.2; }
@@ -92,7 +92,7 @@
   section { padding:5rem 5%; }
   .container { max-width:1200px; margin:0 auto; }
   .section-tag { display:inline-block; color:var(--accent); font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.8rem; }
-  .section-title { font-family:'Syne',sans-serif; font-size:clamp(1.8rem,3vw,2.4rem); font-weight:800; color:var(--navy); margin-bottom:1rem; }
+  .section-title { font-family:'Poppins',sans-serif; font-size:clamp(1.8rem,3vw,2.4rem); font-weight:800; color:var(--navy); margin-bottom:1rem; }
   .section-line { width:48px; height:4px; background:var(--green); border-radius:4px; margin-bottom:2.5rem; }
   .section-desc { color:#64748b; line-height:1.75; max-width:640px; }
 
@@ -110,7 +110,7 @@
   /* ===== SKILLS ===== */
   #skills { background:var(--light); }
   .skills-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; }
-  .skills-col h3 { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:800; color:var(--navy); margin-bottom:1.5rem; display:flex; align-items:center; gap:.6rem; }
+  .skills-col h3 { font-family:'Poppins',sans-serif; font-size:1.1rem; font-weight:800; color:var(--navy); margin-bottom:1.5rem; display:flex; align-items:center; gap:.6rem; }
   .skills-col h3::before { content:''; width:6px; height:20px; background:var(--green); border-radius:3px; }
   .skill-item { margin-bottom:1.2rem; }
   .skill-item .skill-top { display:flex; justify-content:space-between; margin-bottom:.5rem; }
@@ -140,7 +140,7 @@
   .slider-next { right:8px; }
   .proyek-body { padding:1.3rem; }
   .proyek-cat { font-size:.72rem; font-weight:700; color:var(--green); text-transform:uppercase; letter-spacing:.06em; margin-bottom:.4rem; }
-  .proyek-body h3 { font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:var(--navy); margin-bottom:.5rem; }
+  .proyek-body h3 { font-family:'Poppins',sans-serif; font-size:1rem; font-weight:800; color:var(--navy); margin-bottom:.5rem; }
   .proyek-body p { font-size:.84rem; color:#64748b; line-height:1.6; margin-bottom:1rem; }
   .proyek-tags { display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1rem; }
   .ptag { background:var(--light); color:var(--accent); font-size:.72rem; font-weight:600; padding:.25rem .7rem; border-radius:100px; }
@@ -156,7 +156,7 @@
   .tl-card { background:#fff; border-radius:14px; padding:1.4rem; border:1px solid var(--gray-light); box-shadow:0 2px 8px rgba(0,0,0,0.05); display:flex; gap:1.2rem; align-items:flex-start; }
   .tl-img-wrap { flex-shrink:0; width:70px; height:70px; border-radius:10px; overflow:hidden; background:var(--light); display:flex; align-items:center; justify-content:center; font-size:2rem; border:1px solid var(--gray-light); }
   .tl-img-wrap img { width:100%; height:100%; object-fit:cover; }
-  .tl-content h4 { font-family:'Syne',sans-serif; font-size:.96rem; font-weight:800; color:var(--navy); margin-bottom:.25rem; }
+  .tl-content h4 { font-family:'Poppins',sans-serif; font-size:.96rem; font-weight:800; color:var(--navy); margin-bottom:.25rem; }
   .tl-content .tl-meta { font-size:.8rem; color:var(--accent); font-weight:600; margin-bottom:.4rem; }
   .tl-content p { font-size:.84rem; color:#64748b; line-height:1.6; }
   .tl-year { display:inline-flex; background:var(--accent); color:#fff; font-size:.72rem; font-weight:700; padding:.2rem .6rem; border-radius:100px; margin-bottom:.4rem; }
@@ -168,14 +168,14 @@
   .award-card:hover { transform:translateY(-5px); box-shadow:0 12px 30px rgba(0,0,0,0.2); }
   .award-icon { font-size:2.5rem; margin-bottom:1rem; }
   .award-year { display:inline-block; background:rgba(34,197,94,0.15); color:var(--green); font-size:.72rem; font-weight:700; padding:.2rem .7rem; border-radius:100px; margin-bottom:.7rem; letter-spacing:.04em; }
-  .award-card h3 { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:800; color:#fff; margin-bottom:.5rem; line-height:1.3; }
+  .award-card h3 { font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:800; color:#fff; margin-bottom:.5rem; line-height:1.3; }
   .award-card p { font-size:.82rem; color:rgba(255,255,255,0.55); line-height:1.6; }
 
   /* ===== TESTIMONI ===== */
   #testimoni { background:var(--light); }
   .testi-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.8rem; }
   .testi-card { background:#fff; border-radius:16px; padding:2rem; border:1px solid var(--gray-light); position:relative; }
-  .testi-card::before { content:'"'; position:absolute; top:.5rem; left:1.5rem; font-size:5rem; color:var(--accent); opacity:.1; font-family:'Syne',sans-serif; line-height:1; }
+  .testi-card::before { content:'"'; position:absolute; top:.5rem; left:1.5rem; font-size:5rem; color:var(--accent); opacity:.1; font-family:'Poppins',sans-serif; line-height:1; }
   .testi-text { font-size:.9rem; color:#475569; line-height:1.7; margin-bottom:1.5rem; font-style:italic; }
   .testi-person { display:flex; align-items:center; gap:.8rem; }
   .testi-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg, var(--accent), var(--green)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:1rem; flex-shrink:0; }
@@ -187,7 +187,7 @@
   #kontak { background:linear-gradient(135deg, var(--navy) 0%, #0d2950 100%); position:relative; overflow:hidden; }
   #kontak::before { content:''; position:absolute; top:-50%; right:-20%; width:500px; height:500px; background:radial-gradient(circle, rgba(37,99,235,0.15), transparent); pointer-events:none; }
   .kontak-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; }
-  .kontak-info h2 { font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:#fff; margin-bottom:1rem; }
+  .kontak-info h2 { font-family:'Poppins',sans-serif; font-size:2rem; font-weight:800; color:#fff; margin-bottom:1rem; }
   .kontak-info p { color:rgba(255,255,255,0.55); line-height:1.7; margin-bottom:2rem; }
   .kontak-items { display:flex; flex-direction:column; gap:1rem; }
   .kontak-item { display:flex; align-items:center; gap:1rem; }
@@ -239,9 +239,125 @@
     .hero-stats { justify-content:center; }
   }
   .nav-links.open { display:flex; flex-direction:column; position:absolute; top:68px; left:0; right:0; background:var(--navy); padding:1.5rem 5%; gap:1rem; }
+
+  .btn-tambah-testi {
+  background: transparent;
+  border: 2px dashed var(--accent);
+  color: var(--accent);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .92rem;
+  font-weight: 700;
+  padding: .8rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .25s;
+}
+.btn-tambah-testi:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Modal Testimoni */
+#modal-testi {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+#modal-testi .testi-form-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+}
+#modal-testi h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+}
+.testi-field {
+  margin-bottom: 1rem;
+}
+.testi-field label {
+  display: block;
+  font-size: .82rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: .4rem;
+}
+.testi-field input,
+.testi-field textarea,
+.testi-field select {
+  width: 100%;
+  border: 1.5px solid var(--gray-light);
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  font-family: inherit;
+  font-size: .88rem;
+  color: var(--text);
+  outline: none;
+  transition: .2s;
+}
+.testi-field input:focus,
+.testi-field textarea:focus,
+.testi-field select:focus {
+  border-color: var(--accent);
+}
+.testi-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.star-selector {
+  display: flex;
+  gap: .4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.star-selector span {
+  color: #cbd5e1;
+  transition: color .15s;
+}
+.star-selector span.active {
+  color: #f59e0b;
+}
+.btn-simpan-testi {
+  width: 100%;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  font-size: .95rem;
+  padding: .9rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: .5rem;
+  transition: .2s;
+}
+.btn-simpan-testi:hover {
+  background: var(--green-dark);
+}
+.btn-tutup-testi {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #94a3b8;
+}
 </style>
 </head>
 <body>
+
+<link rel="icon" type="image/png" href="assets/logo/favicon.png">
 
 <!-- NAVBAR -->
 <nav>
@@ -269,7 +385,7 @@
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-badge">Tersedia untuk Pekerjaan</div>
-      <h1>Lulusan SMK<br><span>Teknik Elektro</span><br>— Inovator IoT</h1>
+      <h1>Lulusan SMK<br><span>Teknik Elektronika</span><br>— Inovator IoT</h1>
       <p class="subtitle">Fokus pada Embedded System, IoT, dan Sistem Bangunan Cerdas. Berpengalaman dalam perakitan, pengujian, dan pengembangan perangkat elektronik.</p>
       <div class="hero-btns">
         <a href="#proyek" class="btn-primary">🚀 Lihat Proyek</a>
@@ -284,7 +400,7 @@
     <div class="hero-img-wrap">
       <div class="hero-img-bg"></div>
       <div class="hero-img-frame">
-        <img src="T-removebg-preview.png" alt="Teris Suherlan" id="heroImg">
+        <img src="Portopolio-teris.png" alt="Teris Suherlan" id="heroImg">
       </div>
     </div>
   </div>
@@ -296,7 +412,7 @@
     <div class="tentang-grid">
       <div class="tentang-img-wrap reveal">
         <div class="tentang-img-bg"></div>
-        <img src="T-removebg-preview.png" alt="Teris Suherlan" class="tentang-img" id="tentangImg">
+        <img src="Portopolio-teris.png" alt="Teris Suherlan" class="tentang-img" id="tentangImg">
       </div>
       <div class="tentang-text reveal">
         <div class="section-tag">— Tentang Saya</div>
@@ -380,7 +496,6 @@
             <div class="softskill-tag">3D Modeling</div>
             <div class="softskill-tag">MS Office</div>
             <div class="softskill-tag">Multimeter</div>
-            <div class="softskill-tag">Oscilloscope</div>
           </div>
         </div>
       </div>
@@ -478,7 +593,10 @@
         <div class="proyek-slider" id="slider4">
           <div class="slide-track" id="track4">
             <div class="slide-placeholder">🚦</div>
-            <!-- Tambahkan gambar: <img class="slide-img" src="URL_GAMBAR_ANDA" alt="Tusely"> -->
+              <img class="slide-img" src="https://drive.google.com/uc?export=view&id=1RdDxXyWRzHWK0JfrSINCwtwoBNkf0B-J" alt="Tusely 1">
+              <img class="slide-img" src="https://drive.google.com/uc?export=view&id=1LjECF99oVAD9kahYtu-s41qRJQ-Qm6GX" alt="Tusely 2">
+              <img class="slide-img" src="https://drive.google.com/uc?export=view&id=1o33haaAD9M69XDqlxIfvtkEFi9a_f4yW" alt="Tusely 3">
+              <img class="slide-img" src="https://drive.google.com/uc?export=view&id=1cxmB06JEQTb-UPZt-UxgpxNvwaQdXRRM" alt="Tusely 4">
           </div>
           <div class="slider-dots" id="dots4"><div class="dot active" onclick="goSlide(4,0)"></div></div>
           <button class="slider-btn slider-prev" onclick="prevSlide(4)">‹</button>
@@ -626,12 +744,48 @@
       <div class="award-card">
         <div class="award-icon">⭐</div>
         <div class="award-year">2026</div>
-        <h3>PKL Terbaik – Tim IoT</h3>
+        <h3>PKL – Tim IoT</h3>
         <p>Pencapaian selama PKL di PT LSKK Indonesia dengan kontribusi nyata dalam pengembangan sistem IoT industri.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal Form Tambah Testimoni -->
+<div id="modal-testi">
+  <div class="testi-form-box">
+    <button class="btn-tutup-testi" onclick="closeTestiModal()">✕</button>
+    <h3>✍️ Tambah Testimoni</h3>
+
+    <div class="testi-field">
+      <label>Nama</label>
+      <input type="text" id="testi-nama" placeholder="Contoh: Budi Santoso">
+    </div>
+
+    <div class="testi-field">
+      <label>Instansi / Jabatan / Teman Sejawat</label>
+      <input type="text" id="testi-instansi" placeholder="Contoh: Guru Pembimbing · SMKN 1 Katapang/ Teman Sejawat · SMKN 1 Katapang / Pembimbing PKL · PT LSKK Indonesia">
+    </div>
+
+    <div class="testi-field">
+      <label>Bintang</label>
+      <div class="star-selector" id="star-selector">
+        <span onclick="setBintang(1)">★</span>
+        <span onclick="setBintang(2)">★</span>
+        <span onclick="setBintang(3)">★</span>
+        <span onclick="setBintang(4)">★</span>
+        <span onclick="setBintang(5)">★</span>
+      </div>
+    </div>
+
+    <div class="testi-field">
+      <label>Pesan / Testimoni</label>
+      <textarea id="testi-pesan" placeholder="Tulis testimoni di sini..."></textarea>
+    </div>
+
+    <button class="btn-simpan-testi" onclick="simpanTestimoni()">💾 Simpan Testimoni</button>
+  </div>
+</div>
 
 <!-- TESTIMONI -->
 <section id="testimoni">
@@ -641,6 +795,16 @@
       <h2 class="section-title">Yang Mereka Katakan</h2>
       <div class="section-line" style="margin:0 auto;"></div>
     </div>
+    <!-- Tombol Tambah Testimoni -->
+<div style="text-align:center; margin-top:2.5rem;">
+  <button class="btn-tambah-testi" onclick="openTestiModal()">
+    ✍️ Tambah Testimoni
+  </button>
+</div>
+
+<!-- Container testimoni baru -->
+<div id="testi-tambahan" style="display:grid; grid-template-columns:repeat(2,1fr); gap:1.8rem; margin-top:1.8rem;"></div>
+
     <div class="testi-grid reveal">
       <div class="testi-card">
         <div class="stars">★★★★★</div>
@@ -674,18 +838,18 @@
     <div class="kontak-grid">
       <div class="kontak-info reveal">
         <div class="section-tag" style="color:var(--green);">— Hubungi Saya</div>
-        <h2>Mari Berkolaborasi! 🚀</h2>
+        <h2>Mari Berkolaborasi!🔥</h2>
         <p>Terbuka untuk kolaborasi proyek, magang, atau kesempatan kerja di bidang elektronika, IoT, dan embedded system.</p>
         <div class="kontak-items">
           <div class="kontak-item">
-            <div class="kontak-item-icon">📧</div>
+            <div class="kontak-item-icon">✉️</div>
             <div class="kontak-item-text">
               <div class="label">Email</div>
               <div class="value">terissuherlan7@gmail.com</div>
             </div>
           </div>
           <div class="kontak-item">
-            <div class="kontak-item-icon">📱</div>
+            <div class="kontak-item-icon">📞</div>
             <div class="kontak-item-text">
               <div class="label">WhatsApp / Telepon</div>
               <div class="value">+62 857-2467-4101</div>
@@ -869,8 +1033,8 @@ function openModal(key) {
   const d = modalData[key];
   if(!d) return;
   document.getElementById('modal-content').innerHTML = `
-    <div style="font-family:'Plus Jakarta Sans',sans-serif;">
-      <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;color:#0a1628;margin-bottom:.5rem;">${d.title}</h2>
+    <div style="font-family:'Roboto',sans-serif;">
+      <h2 style="font-family:'Poppins',sans-serif;font-size:1.4rem;color:#0a1628;margin-bottom:.5rem;">${d.title}</h2>
       <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem;">
         ${d.tags.map(t=>`<span style="background:#f0f4ff;color:#2563eb;font-size:.75rem;font-weight:700;padding:.2rem .7rem;border-radius:100px;">${t}</span>`).join('')}
       </div>
@@ -883,7 +1047,7 @@ function openModal(key) {
   m.style.display = 'flex';
 }
 function openAddModal() {
-  document.getElementById('modal-content').innerHTML = `<div style="text-align:center;padding:2rem;"><div style="font-size:4rem;margin-bottom:1rem;">🚀</div><h3 style="font-family:'Syne',sans-serif;color:#0a1628;margin-bottom:.5rem;">Proyek Baru Sedang Dikerjakan</h3><p style="color:#64748b;font-size:.9rem;">Nantikan proyek-proyek terbaru dari Teris Suherlan!</p></div>`;
+  document.getElementById('modal-content').innerHTML = `<div style="text-align:center;padding:2rem;"><div style="font-size:4rem;margin-bottom:1rem;">🚀</div><h3 style="font-family:'Poppins',sans-serif;color:#0a1628;margin-bottom:.5rem;">Proyek Baru Sedang Dikerjakan</h3><p style="color:#64748b;font-size:.9rem;">Nantikan proyek-proyek terbaru dari Teris Suherlan!</p></div>`;
   document.getElementById('modal').style.display = 'flex';
 }
 function closeModal() { document.getElementById('modal').style.display = 'none'; }
@@ -907,6 +1071,62 @@ window.addEventListener('scroll', function(){
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.style.color = a.getAttribute('href') === '#'+current ? 'var(--green)' : '';
   });
+});
+// === TESTIMONI ===
+let bintangDipilih = 5;
+
+function openTestiModal() {
+  document.getElementById('modal-testi').style.display = 'flex';
+  setBintang(5);
+}
+function closeTestiModal() {
+  document.getElementById('modal-testi').style.display = 'none';
+  // Reset form
+  document.getElementById('testi-nama').value = '';
+  document.getElementById('testi-instansi').value = '';
+  document.getElementById('testi-pesan').value = '';
+  setBintang(5);
+}
+function setBintang(n) {
+  bintangDipilih = n;
+  document.querySelectorAll('#star-selector span').forEach((s, i) => {
+    s.classList.toggle('active', i < n);
+  });
+}
+function simpanTestimoni() {
+  const nama = document.getElementById('testi-nama').value.trim();
+  const instansi = document.getElementById('testi-instansi').value.trim();
+  const pesan = document.getElementById('testi-pesan').value.trim();
+
+  if (!nama || !pesan) {
+    alert('Nama dan testimoni wajib diisi!');
+    return;
+  }
+
+  const bintang = '★'.repeat(bintangDipilih) + '☆'.repeat(5 - bintangDipilih);
+  const inisial = nama.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
+
+  const card = document.createElement('div');
+  card.className = 'testi-card';
+  card.innerHTML = `
+    <div class="stars">${bintang}</div>
+    <p class="testi-text">"${pesan}"</p>
+    <div class="testi-person">
+      <div class="testi-avatar">${inisial}</div>
+      <div>
+        <div class="testi-name">${nama}</div>
+        <div class="testi-role">${instansi || '-'}</div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('testi-tambahan').appendChild(card);
+  closeTestiModal();
+}
+
+// Tutup modal kalau klik di luar
+document.getElementById('modal-testi').addEventListener('click', function(e) {
+  if (e.target === this) closeTestiModal();
 });
 </script>
 
