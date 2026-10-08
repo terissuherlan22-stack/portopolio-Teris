@@ -129,8 +129,8 @@
   .proyek-card { border-radius:16px; overflow:hidden; background:#fff; border:1px solid var(--gray-light); box-shadow:0 2px 12px rgba(0,0,0,0.06); transition:.3s; }
   .proyek-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,0.12); }
   .proyek-slider { position:relative; overflow:hidden; height:200px; background:#e2e8f0; }
-  .slide-track { display:flex; height:100%; transition:transform .5s ease; }
-  .slide-img { min-width:100%; height:200px; object-fit:cover; }
+  .slide-track { display:flex; height:100%; transition:transform .35s cubic-bezier(.22,.61,.36,1); }
+  .slide-img { flex:0 0 100%; width:100%; height:100%; object-fit:contain; background:#f1f5f9; display:block; }
   .slide-placeholder { min-width:100%; height:200px; background:linear-gradient(135deg, #1e3a5f, #0a1628); display:flex; align-items:center; justify-content:center; font-size:3.5rem; }
   .slider-dots { position:absolute; bottom:8px; left:50%; transform:translateX(-50%); display:flex; gap:6px; }
   .dot { width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,0.5); cursor:pointer; transition:.2s; }
@@ -425,10 +425,38 @@
   overflow: hidden;
   border-radius: 10px;
 }
+.timeline .proyek-slider {
+  height: 300px;
+  background: #f1f5f9;
+}
 .tl-school-photo {
   width: 100%;
   max-height: 350px;
   object-fit: cover;
+  display: block;
+}
+
+/* ===== PERBAIKAN UTAMA SLIDER PROYEK ===== */
+.proyek-slider {
+  position: relative;
+  overflow: hidden; /* WAJIB: Menyembunyikan gambar yang berada di luar kotak */
+  width: 100%;
+  height: 200px; /* Sesuaikan tinggi slider */
+}
+
+.slide-track {
+  display: flex; /* WAJIB: Membuat semua gambar berjejer secara horizontal ke samping */
+  height: 100%;
+  transition: transform .35s cubic-bezier(.22,.61,.36,1);
+  width: 100%;
+}
+
+.slide-img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f1f5f9;
   display: block;
 }
 </style>
@@ -447,6 +475,7 @@
     <li><a href="#skills">Skill</a></li>
     <li><a href="#proyek">Proyek</a></li>
     <li><a href="#Pengalaman">Pengalaman</a></li>
+    <li><a href="#Sertifikasi">Sertifikasi</a></li>
     <li><a href="#penghargaan">Penghargaan</a></li>
     <li><a href="#testimoni">Testimoni</a></li>
     <li><a href="#kontak">Kontak</a></li>
@@ -461,9 +490,9 @@
   <div class="hero-dots"></div>
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-badge">Tersedia untuk Pekerjaan</div>
+      <div class="hero-badge">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
       <h1>Lulusan SMK<br><span>Teknik Elektronika</span><br>— Inovator IoT</h1>
-      <p class="subtitle">Fokus pada Embedded System, IoT, dan Sistem Bangunan Cerdas. Berpengalaman dalam perakitan, pengujian, dan pengembangan perangkat elektronik.</p>
+      <p class="subtitle">Lulusan Teknik Elektronika dengan ketertarikan pada teknologi, sistem elektronik, dan otomasi. Memiliki pengalaman dalam perakitan, pengujian, troubleshooting, dan pengembangan perangkat elektronik serta sistem berbasis mikrokontroler.</p>
       <div class="hero-btns">
         <a href="#proyek" class="btn-primary">🚀 Lihat Proyek</a>
         <a href="#kontak" class="btn-outline">📩 Hubungi Saya</a>
@@ -496,17 +525,19 @@
         <h2 class="section-title">Teris Suherlan</h2>
         <div class="section-line"></div>
         <p class="section-desc">
-          Siswa SMK Teknik Elektronika Industri yang antusias dalam pembuatan proyek elektronika dan sistem IoT. Memiliki pengalaman nyata dalam perakitan dan pengujian sistem IoT semasa menjalani PKL di industri, serta keinginan terus berinovasi dalam berbagai proyek elektronika.
+         Siswa SMK Teknik Elektronika Industri yang memiliki ketertarikan kuat pada teknologi, elektronika, dan sistem otomasi industri. Memiliki pengalaman dalam perakitan, pengujian, troubleshooting, serta pengembangan perangkat elektronik dan sistem berbasis IoT melalui proyek sekolah maupun pengalaman praktik di industri.
+
+Memiliki minat dan kemampuan pada bidang Embedded System, IoT, Industrial Control, Elektronika Industri, dan Smart Building. Terbiasa mempelajari teknologi baru, bekerja secara mandiri maupun dalam tim, serta memiliki semangat untuk terus mengembangkan kemampuan teknis dan menghasilkan solusi yang inovatif.
         </p>
         <p class="section-desc" style="margin-top:1rem; margin-bottom:1.5rem;">
-          Tertarik pada teknologi, khususnya <strong>Embedded System</strong>, <strong>IoT</strong>, dan <strong>Smart Building</strong>. Siap berkontribusi dan mengaplikasikan keahlian teknis secara langsung.
+          Siap mengaplikasikan pengetahuan dan keterampilan teknis secara langsung serta berkembang bersama perusahaan di berbagai bidang yang berkaitan dengan teknologi, elektronika, otomasi, dan industri.
         </p>
         <div class="skill-icons">
-          <div class="skill-chip"><span class="icon">⚙️</span> Elektronika</div>
+          <div class="skill-chip"><span class="icon">💡</span> Elektronika</div>
           <div class="skill-chip"><span class="icon">📡</span> IoT & Embedded</div>
           <div class="skill-chip"><span class="icon">🖥️</span> Desain PCB</div>
           <div class="skill-chip"><span class="icon">📐</span> Desain 3D</div>
-          <div class="skill-chip"><span class="icon">💡</span> Inovator</div>
+          <div class="skill-chip"><span class="icon">⚙️</span> Industrial Control</div>
         </div>
         <a href="#kontak" class="btn-primary" style="width:fit-content;">Mulai Kolaborasi →</a>
       </div>
@@ -580,7 +611,7 @@
           <div class="skill-top" style="margin-bottom: 4px;">
             <span class="skill-name" style="font-weight: 700; color: var(--navy); font-size: 1.05rem;">Pemrograman Mikrokontroler</span>
           </div>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Menguasai Arduino, ESP8266, ESP32, dan STM32 untuk sistem kontrol.</p>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Menguasai basic Arduino, ESP8266, ESP32, dan STM32 untuk sistem kontrol.</p>
         </div>
 
         <div class="skill-item" style="margin-bottom: 1.5rem;">
@@ -601,14 +632,14 @@
           <div class="skill-top" style="margin-bottom: 4px;">
             <span class="skill-name" style="font-weight: 700; color: var(--navy); font-size: 1.05rem;">Analisis Rangkaian & Alat Ukur</span>
           </div>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Membaca skema analog/digital serta mahir menggunakan multimeter.</p>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Membaca skema analog/digital serta bisa menggunakan multimeter.</p>
         </div>
         
         <div class="skill-item" style="margin-bottom: 1.5rem;">
           <div class="skill-top" style="margin-bottom: 4px;">
             <span class="skill-name" style="font-weight: 700; color: var(--navy); font-size: 1.05rem;">Desain 3D Device IoT</span>
           </div>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Pemodelan enclosure (casing) dan komponen menggunakan software 3D CAD.</p>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Pemodelan sederhana enclosure (casing) dan komponen menggunakan software 3D CAD.</p>
         </div>
         
         <div class="skill-item" style="margin-bottom: 1.5rem;">
@@ -628,11 +659,11 @@
           </div>
           <div>
             <strong style="font-size:0.95rem; color:var(--navy); display: block; margin-bottom: 2px;">🤝 Kerja Tim & Komunikasi:</strong>
-            <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Berpengalaman kolaborasi lintas bidang dan menyampaikan ide teknis secara jelas.</p>
+            <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Berpengalaman kolaborasi lintas bidang dan menyampaikan ide teknis.</p>
           </div>
           <div>
             <strong style="font-size:0.95rem; color:var(--navy); display: block; margin-bottom: 2px;">⚡ Cepat Belajar & Disiplin:</strong>
-            <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Mudah beradaptasi dengan teknologi baru dan konsisten bekerja sesuai prosedur K3.</p>
+            <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.4;">Mudah beradaptasi dengan teknologi baru dengan mempelajarinya dan konsisten bekerja sesuai prosedur K3.</p>
           </div>
         </div>
         
@@ -641,7 +672,7 @@
           <div class="softskill-tags" style="margin-top:.8rem;">
             <div class="softskill-tag">Arduino IDE</div>
             <div class="softskill-tag">Eagle CAD</div>
-            <div class="softskill-tag">SolidWorks / Fusion 360</div>
+            <div class="softskill-tag">SkechUp</div>
             <div class="softskill-tag">Digital/Analog Multimeter</div>
             <div class="softskill-tag">Microsoft Office</div>
           </div>
@@ -776,7 +807,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
         <div class="proyek-body">
           <div class="proyek-cat">🌱 Smart Farming</div>
           <h3>TUMARANG – Penyiram Otomatis IoT</h3>
-          <p>Sistem penyiram tanaman otomatis berbasis IoT dan ramah lingkungan. Monitoring dan kontrol jarak jauh via smartphone.</p>
+          <p>Projek Kolaborasi dan kerjasama dengan SMAN 1 Pangalengan dalam pembuatan sistem penyiram tanaman otomatis berbasis IoT dan ramah lingkungan. Monitoring dan kontrol jarak jauh via APK mobile.</p>
           <div class="proyek-tags">
             <span class="ptag">IoT</span>
             <span class="ptag">Sensor</span>
@@ -886,6 +917,9 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
               <img class="slide-img" src="foto/digital5.jpeg" alt="Jam Digital 5">  
               <img class="slide-img" src="foto/digital6.jpeg" alt="Jam Digital 6">
               <img class="slide-img" src="foto/digital7.jpeg" alt="Jam Digital 7">
+              <img class="slide-img" src="foto/SkematikKJD (1).png" alt="Jam Digital 8">
+              <img class="slide-img" src="foto/SkematikKJD (2).png" alt="Jam Digital 9">
+              <img class="slide-img" src="foto/SkematikKJD (3).png" alt="Jam Digital 10">
           </div>
           <div class="slider-dots" id="dots9"><div class="dot active" onclick="goSlide(9,0)"></div></div>
           <button class="slider-btn slider-prev" onclick="prevSlide(9)">‹</button>
@@ -894,7 +928,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
         <div class="proyek-body">
           <div class="proyek-cat">⌚ Embedded Systems</div>
           <h3>Jam Digital STM32</h3>
-          <p>Perancangan dan pembuatan jam digital menggunakan mikrokontroler STM32 dengan fitur tambahan seperti alarm dan sinkronisasi waktu.</p>
+          <p>Perancangan dan pembuatan jam digital menggunakan mikrokontroler STM32 dengan fitur tambahan seperti alarm dan setting waktu.</p>
           <div class="proyek-tags">
             <span class="ptag">PLC</span>
             <span class="ptag">Embedded Systems</span>
@@ -917,14 +951,14 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
           <button class="slider-btn slider-next" onclick="nextSlide(10)">›</button>
         </div>
         <div class="proyek-body">
-          <div class="proyek-cat">⌚ Embedded Systems</div>
+          <div class="proyek-cat">⚙️ Otomasi Industri</div>
           <h3>Industrial Control</h3>
-          <p>Design dan implementasi sistem kontrol industri menggunakan mikrokontroler, termasuk perancangan PCB dan pengembangan aplikasi firmware.</p>
+          <p>Perakitan dan pengawatan panel kontrol industri menggunakan kontaktor dan relay. Panel dilengkapi tombol kendali serta lampu indikator untuk mengoperasikan dan memantau status sistem.</p>
           <div class="proyek-tags">
-            <span class="ptag">PLC</span>
-            <span class="ptag">Embedded Systems</span>
-            <span class="ptag">Mobile App</span>
-            <span class="ptag">IoT</span>
+            <span class="ptag">Panel Kontrol</span>
+            <span class="ptag">Kontaktor</span>
+            <span class="ptag">Relay</span>
+            <span class="ptag">Lampu Indikator</span>
           </div>
           <button class="btn-detail" onclick="openModal('industri')">Lihat Detail →</button>
         </div>
@@ -934,10 +968,13 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
       <div class="proyek-card">
         <div class="proyek-slider" id="slider11">
           <div class="slide-track" id="track11">
-            <div class="slide-placeholder">🏭</div>
-            <!-- Tambahkan gambar: <img class="slide-img" src="URL_GAMBAR_ANDA" alt="PKL IoT"> -->
+              <img class="slide-img" src="foto/lskk1.png" alt="Sertifikat 1">
+              <img class="slide-img" src="foto/PT Langgeng Sejahtera Kreasi Komputasi (2).png" alt="Sertifikat 2">
+              <img class="slide-img" src="foto/PT Langgeng Sejahtera Kreasi Komputasi (3).png" alt="Sertifikat 3">
           </div>
-          <div class="slider-dots" id="dots11"><div class="dot active" onclick="goSlide(11,0)"></div></div>
+          <div class="slider-dots" id="dots11"><div class="dot active" onclick="goSlide(11,0)"></div><div class="dot" onclick="goSlide(11,1)"></div>
+  <div class="dot" onclick="goSlide(11,2)"></div>
+        </div>
           <button class="slider-btn slider-prev" onclick="prevSlide(11)">‹</button>
           <button class="slider-btn slider-next" onclick="nextSlide(11)">›</button>
         </div>
@@ -973,7 +1010,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
   <div class="container">
     
     <div style="margin-bottom:3rem;" class="reveal">
-      <div class="section-tag">— Sertifikasi</div>
+      <div class="section-tag">— Pengalaman</div>
       <h2 class="section-title">Pengalaman</h2>
       <div class="section-line"></div>
     </div>
@@ -1011,12 +1048,12 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
   </p>
           </div>
           <!-- Bagian Bawah: FOTO KEGIATAN LANSKAP PENUH -->
-          <div class="tl-school-photo-wrap proyek-slider" id="sliders2" style="width: 100%; margin-top: 15px; overflow: hidden; border-radius: 10px; position: relative;">
+          <div class="tl-school-photo-wrap proyek-slider" id="sliders1" style="width: 100%; margin-top: 15px; overflow: hidden; border-radius: 10px; position: relative;">
             <div class="slide-track" id="tracks1">
-              <img class="slide-img" src="foto/lskkkita.jpeg" alt="Foto Kegiatan" style="width: 100% !important; height: 300px !important; object-fit: cover !important; display: block !important;">
-              <img class="slide-img" src="foto/lskk1.png" alt="Sertifikat 1" style="width: 100% !important; height: 300px !important; object-fit: cover !important; display: block !important;">
-              <img class="slide-img" src="foto/PT Langgeng Sejahtera Kreasi Komputasi (2).png" alt="Sertifikat 2" style="width: 100% !important; height: 300px !important; object-fit: cover !important; display: block !important;">
-              <img class="slide-img" src="foto/PT Langgeng Sejahtera Kreasi Komputasi (3).png" alt="Sertifikat 3" style="width: 100% !important; height: 300px !important; object-fit: cover !important; display: block !important;">
+              <img class="slide-img" src="foto/lskkkita.jpeg" alt="Foto Kegiatan">
+              <img class="slide-img" src="foto/lskk1.png" alt="Sertifikat 1">
+              <img class="slide-img" src="foto/PT Langgeng Sejahtera Kreasi Komputasi (2).png" alt="Sertifikat 2">
+              <img class="slide-img" src="foto/PT Langgeng Sejahtera Kreasi Komputasi (3).png" alt="Sertifikat 3">
             </div>
             <div class="slider-dots" id="dotss1"></div>
             <button class="slider-btn slider-prev" onclick="prevSlide('s1')">‹</button>
@@ -1025,6 +1062,70 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
         </div>
       </div>
 
+      <!-- ITEM 4 : OJT Yayasan Karsa Bangun Desa dan Mitra PT Makerindo -->
+      <div class="tl-item" style="width: 100%;">
+        <div class="tl-dot"></div>
+        <div class="tl-card" style="display: block; width: 100%; box-sizing: border-box;">
+          <div class="ojt-header" style="display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin-bottom: 1rem; width: 100%;">
+            <div style="display: flex; flex-shrink: 0; gap: .5rem;">
+              <div class="tl-img-wrap">
+                <img src="foto/logo-karsa-bangun-desa-ojt.png" alt="Logo Yayasan Karsa Bangun Desa" class="tl-logo">
+              </div>
+              <div class="tl-img-wrap">
+                <img src="foto/logo-makerindo-ojt.png" alt="Logo PT Makerindo" class="tl-logo">
+              </div>
+            </div>
+            <div style="flex: 1 1 240px; min-width: 0;">
+              <div class="tl-year">OJT</div>
+              <h4 style="margin: 0 0 2px 0; font-size: 1.15rem; font-weight: 800; color: var(--navy);">On-the-Job Training (OJT)</h4>
+              <div class="tl-meta" style="margin-bottom: 2px; font-weight: 700; color: var(--accent);">Yayasan Karsa Bangun Desa · Mitra PT Makerindo</div>
+              <div style="font-size: .8rem; color: #64748b;">Dokumentasi kegiatan OJT</div>
+            </div>
+          </div>
+          <div class="tl-content" style="width: 100%;">
+            <p style="margin: 0 0 15px 0; width: 100%;">
+              Dokumentasi kegiatan On-the-Job Training (OJT) bersama Yayasan Karsa Bangun Desa dan mitra PT Makerindo.
+              <br>
+              <a href="dokumen/Laporan_OJT_Teris_Rapi_Finall.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.85rem; border: 1px solid var(--accent); padding: 5px 12px; border-radius: 6px; background: transparent; transition: all 0.3s ease;">
+                📄 Lihat Laporan OJT (PDF)
+              </a>
+            </p>
+          </div>
+          <div class="tl-school-photo-wrap proyek-slider" id="sliders4" style="width: 100%; height: 300px; margin-top: 15px; overflow: hidden; border-radius: 10px; position: relative;">
+            <div class="slide-track" id="tracks4">
+              <img class="slide-img" src="foto/OJT_KBD (1).jpeg" alt="Kegiatan OJT Yayasan Karsa Bangun Desa 1">
+              <img class="slide-img" src="foto/OJT_KBD (2).jpeg" alt="Kegiatan OJT Yayasan Karsa Bangun Desa 2">
+              <img class="slide-img" src="foto/OJT_KBD (3).jpeg" alt="Kegiatan OJT Yayasan Karsa Bangun Desa 3">
+              <img class="slide-img" src="foto/OJT_KBD (1).png" alt="Dokumentasi OJT Yayasan Karsa Bangun Desa 4">
+              <img class="slide-img" src="foto/OJT_KBD (2).png" alt="Dokumentasi OJT Yayasan Karsa Bangun Desa 5">
+              <img class="slide-img" src="foto/OJT_KBD (3).png" alt="Dokumentasi OJT Yayasan Karsa Bangun Desa 6">
+              <img class="slide-img" src="foto/OJT_Makerindo (1).jpeg" alt="Kegiatan OJT PT Makerindo 1">
+              <img class="slide-img" src="foto/OJT_Makerindo (2).jpeg" alt="Kegiatan OJT PT Makerindo 2">
+              <img class="slide-img" src="foto/OJT_Makerindo (3).jpeg" alt="Kegiatan OJT PT Makerindo 3">
+              <img class="slide-img" src="foto/OJT_Makerindo (4).jpeg" alt="Kegiatan OJT PT Makerindo 4">
+              <img class="slide-img" src="foto/OJT_Makerindo (5).jpeg" alt="Kegiatan OJT PT Makerindo 5">
+              <img class="slide-img" src="foto/OJT_Makerindo (1).png" alt="Dokumentasi OJT PT Makerindo 6">
+            </div>
+            <div class="slider-dots" id="dotss4"></div>
+            <button class="slider-btn slider-prev" onclick="prevSlide('s4')">‹</button>
+            <button class="slider-btn slider-next" onclick="nextSlide('s4')">›</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERTIFIKASI -->
+<section id="Sertifikasi">
+  <div class="container">
+    <div style="margin-bottom:3rem;" class="reveal">
+      <div class="section-tag">— Pelatihan & Sertifikasi</div>
+      <h2 class="section-title">Sertifikasi</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline reveal" style="width: 100%; max-width: 100%;">
       <!-- ITEM 2: pelTIHn desain 3D CAD -->
       <div class="tl-item" style="width: 100%;">
         <div class="tl-dot"></div>
@@ -1041,7 +1142,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
               <div class="tl-year">Juni 2026</div>
               <h4 style="margin: 0 0 2px 0; font-size: 1.15rem; font-weight: 800; color: var(--navy);">Sertifikat Pelatihan Pembuatan Model 3D dengan Sistem CAD</h4>
               <div class="tl-meta" style="margin-bottom: 2px; font-weight: 700; color: var(--accent);">BBPVP Bandung · Kementerian Ketenagakerjaan RI</div>
-              <div style="font-size: .8rem; color: #64748b;">SMK Negeri 1 Katapang · Teknik Elektronika Industri</div>
+              <div style="font-size: .8rem; color: #64748b;">Balai Besar Pelatihan Vokasi dan Produktivitas · Teknik Manufaktur</div>
             </div>
           </div>
 
@@ -1055,12 +1156,12 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
             </p>
           </div>
           <!-- Bagian Bawah: FOTO KEGIATAN LANSKAP PENUH -->
-          <div class="tl-school-photo-wrap proyek-slider" id="sliders1" style="width: 100%; margin-top: 15px; overflow: hidden; border-radius: 10px; position: relative;">
-            <div class="slide-track" id="tracks1">
-              <img class="slide-img" src="foto/bbpvp1.jpeg" alt="Foto Kegiatan" style="width: 100% !important; height: 300px !important; object-fit: cover !important; display: block !important;">
-              <img class="slide-img" src="foto/bbpvp2.jpeg" alt="Sertifikat 1" style="width: 100% !important; height: 300px !important; object-fit: cover !important; display: block !important;">
-              <img class="slide-img" src="foto/bbpvp3.jpeg" alt="Sertifikat 2" style="width: 100% !important; height: 300px !important; object-fit: cover !important; display: block !important;">
-              <img class="slide-img" src="foto/bbpvp4.jpeg" alt="Sertifikat 3" style="width: 100% !important; height: 300px !important; object-fit: cover !important; display: block !important;">  
+          <div class="tl-school-photo-wrap proyek-slider" id="sliders2" style="width: 100%; margin-top: 15px; overflow: hidden; border-radius: 10px; position: relative;">
+            <div class="slide-track" id="tracks2">
+              <img class="slide-img" src="foto/bbpvp1.jpeg" alt="Foto Kegiatan">
+              <img class="slide-img" src="foto/bbpvp2.jpeg" alt="Sertifikat 1">
+              <img class="slide-img" src="foto/bbpvp3.jpeg" alt="Sertifikat 2">
+              <img class="slide-img" src="foto/bbpvp4.jpeg" alt="Sertifikat 3">  
             </div>
             <div class="slider-dots" id="dotss2"></div>
             <button class="slider-btn slider-prev" onclick="prevSlide('s2')">‹</button>
@@ -1068,6 +1169,60 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
           </div>
         </div>
       </div>
+
+
+            <!-- ITEM 3: pelTIHn Smart building -->
+      <div class="tl-item" style="width: 100%;">
+        <div class="tl-dot"></div>
+        
+        <div class="tl-card" style="display: block; width: 100%; box-sizing: border-box;">
+          
+          <!-- Bagian Atas: Logo dan Judul (Berdampingan Fleksibel) -->
+          <div style="display: flex; gap: 1.2rem; align-items: center; margin-bottom: 1rem; width: 100%;">
+            <div class="tl-img-wrap" style="flex-shrink: 0;">
+              <!-- TIPS: Ganti src gambar di bawah ini dengan logo PT LSKK Indonesia jika ada -->
+              <img src="foto/bbpvp.png" alt="Logo Instansi" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div>
+              <div class="tl-year">Juli-Agustus 2026</div>
+              <h4 style="margin: 0 0 2px 0; font-size: 1.15rem; font-weight: 800; color: var(--navy);">Sertifikat Pelatihan Pemasangan Sistem Integrasi Bangunan Cerdas Smart Building</h4>
+              <div class="tl-meta" style="margin-bottom: 2px; font-weight: 700; color: var(--accent);">BBPVP Bandung · Kementerian Ketenagakerjaan RI</div>
+              <div style="font-size: .8rem; color: #64748b;">Balai Besar Pelatihan Vokasi dan Produktivitas · Teknik Refrigasi</div>
+            </div>
+          </div>
+
+          <!-- Bagian Tengah: Teks Deskripsi -->
+          <div class="tl-content" style="width: 100%;">
+            <p style="margin: 0 0 15px 0; width: 100%;">Dinyatakan lulus dalam unit kompetensi Pemasangan Sistem Integrasi Bangunan Cerdas. Kompetensi ini mendukung proses perancangan dan implementasi sistem smart building. 
+              <br>
+              <a href="dokumen/Sertifikat-Smart building-bbpvp.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.85rem; border: 1px solid var(--accent); padding: 5px 12px; border-radius: 6px; background: transparent; transition: all 0.3s ease;">
+              📄 Lihat Sertifikat Resmi (PDF)
+            </a>
+            </p>
+          </div>
+          <!-- Bagian Bawah: FOTO KEGIATAN LANSKAP PENUH -->
+          <div class="tl-school-photo-wrap proyek-slider" id="sliders3" style="width: 100%; margin-top: 15px; overflow: hidden; border-radius: 10px; position: relative;">
+            <div class="slide-track" id="tracks3">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (11).jpeg" alt="Pelatihan Smart Building 11">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (12).jpeg" alt="Pelatihan Smart Building 12">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (1).jpeg" alt="Pelatihan Smart Building 1">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (2).jpeg" alt="Pelatihan Smart Building 2">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (3).jpeg" alt="Pelatihan Smart Building 3">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (4).jpeg" alt="Pelatihan Smart Building 4">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (5).jpeg" alt="Pelatihan Smart Building 5">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (6).jpeg" alt="Pelatihan Smart Building 6">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (7).jpeg" alt="Pelatihan Smart Building 7">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (8).jpeg" alt="Pelatihan Smart Building 8">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (9).jpeg" alt="Pelatihan Smart Building 9">
+              <img class="slide-img" src="foto/Pelatihan_smartbuilding (10).jpeg" alt="Pelatihan Smart Building 10">
+            </div>
+            <div class="slider-dots" id="dotss3"></div>
+            <button class="slider-btn slider-prev" onclick="prevSlide('s3')">‹</button>
+            <button class="slider-btn slider-next" onclick="nextSlide('s3')">›</button>
+          </div>
+        </div>
+      </div>
+
 
     </div> <!-- /timeline -->
   </div> <!-- /container -->
@@ -1085,7 +1240,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
     <div class="award-grid reveal">
       
 
-
+<!--   
       <div class="award-card">
         <div class="proyek-slider" id="sliderp1">
           <div class="slide-track" id="trackp1">
@@ -1191,7 +1346,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
           <p> pada tahun yang sama pula mengikuti lomba menulis poster pada festifal MGMP Bahasa Indonesia.</p>
         </div>
       </div>
-
+    -->
       <div class="award-card">
         <div class="proyek-slider" id="sliderp6">
           <div class="slide-track" id="trackp6">
@@ -1247,7 +1402,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
         </div>
         
         <div class="award-body">
-          <div class="award-icon">🥇</div>
+          <div class="award-icon"><div class="award-icon">🏅</div></div>
           <div class="award-year">Maret 2024</div>
           <h3>Juara – Lomba Pemuda Pelopor & Prakarsa</h3>
           <p>Kategori Pemuda Prakarsa Inovatif. Inovasi Inkubator Penetas Telur Ayam Kampung (SI OpeT). Kab. Bandung.</p>
@@ -1255,7 +1410,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
       </div>
       
 
-
+<!--
       <div class="award-card">
         <div class="proyek-slider" id="sliderp9">
           <div class="slide-track" id="trackp9">
@@ -1275,7 +1430,7 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
           <p>Pencapaian selama PKL di PT LSKK Indonesia dengan kontribusi nyata dalam pengembangan sistem IoT industri.</p>
         </div>
       </div>
-
+    -->
     </div>
   </div>
 </section>
@@ -1407,6 +1562,8 @@ kampung yang bernama sinapeul dan dijadikan suatu Karya tulis ilmiah</p>
     <div id="modal-content"></div>
   </div>
 </div>
+
+<script src="script.js"></script>
 
 <script>
 // ==========================================

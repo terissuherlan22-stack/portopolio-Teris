@@ -42,7 +42,7 @@ function initSlider(id) {
   sliders[id] = { current: 0 };
 }
 // Daftarkan semua ID proyek (angka), penghargaan (p), dan sertifikat (s) di sini
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 's1', 's2', 's3'].forEach(initSlider);
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 's1', 's2', 's3', 's4'].forEach(initSlider);
 
 function getSlides(id) {
   return document.querySelectorAll(`#track${id} > *`);
@@ -64,20 +64,31 @@ function updateSlider(id) {
     }
   }
 }
+function ensureSlider(id) {
+  if (!sliders[id]) sliders[id] = { current: 0 };
+}
 function nextSlide(id) {
+  ensureSlider(id);
   const n = document.querySelectorAll(`#track${id} > *`).length;
+  if (!n) return;
   sliders[id].current = (sliders[id].current + 1) % n;
   updateSlider(id);
 }
 function prevSlide(id) {
+  ensureSlider(id);
   const n = document.querySelectorAll(`#track${id} > *`).length;
+  if (!n) return;
   sliders[id].current = (sliders[id].current - 1 + n) % n;
   updateSlider(id);
 }
 function goSlide(id, idx) {
+  ensureSlider(id);
+  const n = document.querySelectorAll(`#track${id} > *`).length;
+  if (!n) return;
   sliders[id].current = idx;
   updateSlider(id);
 }
+updateSlider('s4');
 
 // === MODALS ===
 const modalData = {
